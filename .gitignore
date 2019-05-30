@@ -1,0 +1,9 @@
+.vs/
+Build/
+Documents/
+Library/
+Packages/
+Profiler Data/
+Temp/
+obj/
+UnityPackageManager/
