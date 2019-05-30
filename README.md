@@ -1,2 +1,2 @@
 # Trajectories
-Simple project for demonstrating trajectory drawing in Unity
+Simple project for demonstrating smooth trajectory drawing in Unity.
