@@ -61,7 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FramerateCounter.cs" />
     <Compile Include="Assets\Scripts\LaunchableObject.cs" />
+    <Compile Include="Assets\Scripts\Main.cs" />
+    <Compile Include="Assets\Scripts\TerrainObject.cs" />
     <Compile Include="Assets\Scripts\TrajectoryDataContent.cs" />
     <None Include="Assets\Shaders\Mobile Diffuse X.shader" />
     <Reference Include="UnityEditor.StandardEvents">
