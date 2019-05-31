@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour {
 
     private int _launchDelay = 5;
+    private int _restartDelay = 15;
 
-	void Start () {
+    void Start () {
         // Simple launch
 
         GameObject sphere = GameObject.Find("Sphere");
@@ -29,6 +31,8 @@ public class Main : MonoBehaviour {
 
         launchableObject.OnLaunch();
 
-        yield return new WaitForSeconds(_launchDelay);
+        yield return new WaitForSeconds(_restartDelay);
+
+        SceneManager.LoadScene(0);
     }
 }
