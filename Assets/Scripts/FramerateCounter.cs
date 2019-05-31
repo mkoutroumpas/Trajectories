@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class FramerateCounter : MonoBehaviour
 {
-
     public Text text;
     private float fps, deltaTime;
 
@@ -18,6 +17,5 @@ public class FramerateCounter : MonoBehaviour
         text.text = fps.ToString();
 
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
-
     }
 }
