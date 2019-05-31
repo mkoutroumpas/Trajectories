@@ -25,11 +25,11 @@ public class Main : MonoBehaviour {
 		
 	}
 
-    private IEnumerator SimpleLaunch(LaunchableObject launchableObject)
+    private IEnumerator SimpleLaunch(LaunchableObject launchableObject, Vector3 force = default(Vector3))
     {
         yield return new WaitForSeconds(_launchDelay);
 
-        launchableObject.OnLaunch();
+        launchableObject.OnLaunch(force);
 
         yield return new WaitForSeconds(_restartDelay);
 
