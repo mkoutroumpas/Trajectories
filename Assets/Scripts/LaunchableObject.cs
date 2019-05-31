@@ -94,7 +94,7 @@ public class LaunchableObject : MonoBehaviour
         _numOfCollisions++;
     }
 
-    private IEnumerator Launch(Rigidbody rigidbody)
+    private IEnumerator Launch(Rigidbody rigidbody, Vector3 force = default(Vector3))
     {
         _countTime = Time.time;
 
@@ -110,14 +110,14 @@ public class LaunchableObject : MonoBehaviour
 
         yield return new WaitForSeconds(_preLaunchDelay);
 
-        rigidbody.AddForce(LaunchForce, ForceMode.Impulse);
+        rigidbody.AddForce(force != default(Vector3) ? force : LaunchForce, ForceMode.Impulse);
 
         yield return new WaitForSeconds(_postLaunchDelay);
 
         _isLaunched = true;
     }
 
-    public void OnLaunch()
+    public void OnLaunch(Vector3 force = default(Vector3))
     {
         _ballRigidbody = gameObject.GetComponent<Rigidbody>();
 
@@ -138,6 +138,6 @@ public class LaunchableObject : MonoBehaviour
             eventTrigger.triggers.Clear();
         }
 
-        StartCoroutine(Launch(_ballRigidbody));
+        StartCoroutine(Launch(_ballRigidbody, force));
     }
 }

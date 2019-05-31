@@ -14,7 +14,7 @@ public class Main : MonoBehaviour {
 
         LaunchableObject launchableObject = sphere.GetComponent<LaunchableObject>();
 
-        StartCoroutine(Launch(launchableObject));
+        StartCoroutine(SimpleLaunch(launchableObject));
 
         //TODO: possibly add more, complex launches here
 
@@ -25,7 +25,7 @@ public class Main : MonoBehaviour {
 		
 	}
 
-    private IEnumerator Launch(LaunchableObject launchableObject)
+    private IEnumerator SimpleLaunch(LaunchableObject launchableObject)
     {
         yield return new WaitForSeconds(_launchDelay);
 
@@ -33,6 +33,8 @@ public class Main : MonoBehaviour {
 
         yield return new WaitForSeconds(_restartDelay);
 
-        SceneManager.LoadScene(0);
+        ////SceneManager.LoadScene(0);
+        
+
     }
 }
