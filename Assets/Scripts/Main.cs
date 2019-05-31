@@ -14,8 +14,6 @@ public class Main : MonoBehaviour {
 
         LaunchableObject launchableObject = sphere.GetComponent<LaunchableObject>();
 
-        ////StartCoroutine(SingleLaunch(launchableObject));
-
         StartCoroutine(MultipleLaunch(launchableObject, new List<Vector3>()
         {
             new Vector3(-30, 50, 30),
@@ -23,10 +21,6 @@ public class Main : MonoBehaviour {
         }));
 
         ////StartCoroutine(SingleLaunch(launchableObject, new Vector3(-10, 50, -30)));
-
-        //TODO: possibly add more, complex launches here
-
-        //TODO: reset scene upon finishing up
     }
 	
 	void Update () {
@@ -40,6 +34,8 @@ public class Main : MonoBehaviour {
         launchableObject.OnLaunch(force);
 
         yield return new WaitForSeconds(_nextLaunchDelay);
+
+        ////yield return new WaitForSeconds(_restartSceneDelay);
 
         ////SceneManager.LoadScene(0);
     }
