@@ -86,7 +86,7 @@ public class LaunchableObject : MonoBehaviour
         {
             CarryPosition = _ballRigidbody.gameObject.transform.position;
 
-            TrajectoryDataContent tdc = Camera.main.GetComponentInChildren<TrajectoryDataContent>();
+            TrajectoryDataContent tdc = Camera.main.GetComponent<TrajectoryDataContent>();
 
             tdc.OnLaunchEvent(gameObject.transform.name + " Carry: " + Vector3.Distance(CarryPosition, StartPosition).ToString());
         }

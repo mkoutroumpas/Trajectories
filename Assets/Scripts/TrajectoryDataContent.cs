@@ -18,6 +18,9 @@ public class TrajectoryDataContent : MonoBehaviour
         {
             Text text = GetComponent<Text>();
 
+            if (text == null)
+                return;
+
             if (_lineCount == 0)
             {
                 text.text = string.Empty;

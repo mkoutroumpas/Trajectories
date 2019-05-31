@@ -7,11 +7,14 @@ public class Main : MonoBehaviour {
 
 	void Start () {
         // Simple launch
-        LaunchableObject launchableObject = gameObject.GetComponentInChildren<LaunchableObject>();
+
+        GameObject sphere = GameObject.Find("Sphere");
+
+        LaunchableObject launchableObject = sphere.GetComponent<LaunchableObject>();
 
         StartCoroutine(Launch(launchableObject));
 
-        //TODO: possible add more complex launches
+        //TODO: possibly add more, complex launches here
 
         //TODO: reset scene upon finishing up
     }
