@@ -17,7 +17,8 @@ public class Main : MonoBehaviour {
         StartCoroutine(MultipleLaunch(launchableObject, new List<Vector3>()
         {
             new Vector3(-30, 50, 30),
-            new Vector3(40, 30, -30)
+            new Vector3(40, 30, -30),
+            ////new Vector3(-10, 20, 10) // Add a third or fourth launch, etc.
         }));
 
         ////StartCoroutine(SingleLaunch(launchableObject, new Vector3(-10, 50, -30)));
