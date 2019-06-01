@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour {
 
-    private int _initialLaunchDelay = 3;
+    private int _initialLaunchDelay = 5;
     private int _restartSceneDelay = 15;
     private int _nextLaunchDelay = 3;
 
@@ -23,8 +23,8 @@ public class Main : MonoBehaviour {
 
         ////StartCoroutine(SingleLaunch(launchableObject, new Vector3(-10, 50, -30)));
     }
-	
-	void Update () {
+
+    void Update () {
 		
 	}
 
