@@ -10,6 +10,8 @@ public class Main : MonoBehaviour {
     private int _nextLaunchDelay = 3;
 
     void Start () {
+        QualitySettings.vSyncCount = 0;
+
         GameObject sphere = GameObject.Find("Sphere");
 
         LaunchableObject launchableObject = sphere.GetComponent<LaunchableObject>();
