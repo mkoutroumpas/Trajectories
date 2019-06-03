@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class TrajectoryDataContent : MonoBehaviour
 {
-
     private int _lineCount;
 
     private void Update()
