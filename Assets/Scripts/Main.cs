@@ -26,8 +26,6 @@ public class Main : MonoBehaviour {
             new Vector3(-20, 20, 20),
             ////new Vector3(-10, 20, 10) // Add a third or fourth launch, etc.
         }));
-
-        ////StartCoroutine(SingleLaunch(launchableObject, new Vector3(-10, 50, -30)));
     }
 
     void Update () {
@@ -41,10 +39,6 @@ public class Main : MonoBehaviour {
         launchableObject.OnLaunch(force);
 
         yield return new WaitForSeconds(_nextLaunchDelay);
-
-        ////yield return new WaitForSeconds(_restartSceneDelay);
-
-        ////SceneManager.LoadScene(0);
     }
 
     private IEnumerator MultipleLaunch(LaunchableObject launchableObject, List<Vector3> forces = null)
