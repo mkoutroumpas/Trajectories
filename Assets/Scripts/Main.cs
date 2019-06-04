@@ -5,7 +5,6 @@ using UnityEngine;
 public class Main : MonoBehaviour {
 
     private int _initialLaunchDelay = 5;
-    private int _restartSceneDelay = 15;
     private int _nextLaunchDelay = 3;
 
     void Start () {
