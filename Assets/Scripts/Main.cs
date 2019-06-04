@@ -45,7 +45,7 @@ public class Main : MonoBehaviour {
 
         foreach (var force in forces)
         {
-            if (force != null)
+            if (force != default(Vector3))
             {
                 launchableObject.OnLaunch(force);
 
